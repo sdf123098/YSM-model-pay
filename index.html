@@ -280,13 +280,42 @@
       position: relative;
       height: 168px;
       overflow: hidden;
-      background: linear-gradient(135deg, #8f101b, #e34a58);
+      background: #fff1f2;
+    }
+
+    .preview.default-0 { background: linear-gradient(135deg, #fff8f8, #ffdfe2); }
+    .preview.default-1 { background: linear-gradient(135deg, #fff, #ffe7e9); }
+    .preview.default-2 { background: linear-gradient(135deg, #ffe7e9, #fff7f7); }
+    .preview.default-3 { background: linear-gradient(135deg, #fff, #fbd3d7); }
+    .preview.default-4 { background: linear-gradient(135deg, #fff5f5, #ffe1e4); }
+    .preview.default-5 { background: linear-gradient(135deg, #ffe1e4, #fffafa); }
+
+    .default-art {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--red-700);
+    }
+
+    .default-art::before,
+    .default-art::after {
+      position: absolute;
+      border: 1px solid rgba(187, 20, 34, .13);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .default-art::before { width: 210px; height: 210px; transform: translate(-82px, -74px); }
+    .default-art::after { width: 150px; height: 150px; transform: translate(124px, 78px); }
+    .default-art svg { position: relative; z-index: 1; width: 152px; height: 118px; overflow: visible; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.2; }
+    .default-art .solid { fill: currentColor; stroke: none; }
     }
 
     .preview::after {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 44%, rgba(91, 13, 20, .34));
+      background: linear-gradient(180deg, transparent 44%, rgba(91, 13, 20, .22));
       content: "";
       pointer-events: none;
     }
@@ -461,6 +490,14 @@
     const typeFilterElement = document.getElementById('type-filter');
     const sortFilterElement = document.getElementById('sort-filter');
     const resultCountElement = document.getElementById('result-count');
+    const DEFAULT_ART = [
+      '<svg viewBox="0 0 180 140" aria-hidden="true"><path d="m90 14 62 35v68l-62 35-62-35V49L90 14Z"/><path d="m28 49 62 36 62-36M90 85v67"/><path class="solid" d="m90 31 39 22-39 22-39-22 39-22Z"/></svg>',
+      '<svg viewBox="0 0 180 140" aria-hidden="true"><path d="m90 12 9 35 35-9-26 25 26 25-35-9-9 35-9-35-35 9 26-25-26-25 35 9 9-35Z"/><circle cx="90" cy="68" r="16"/></svg>',
+      '<svg viewBox="0 0 180 140" aria-hidden="true"><circle cx="90" cy="70" r="42"/><ellipse cx="90" cy="70" rx="75" ry="25" transform="rotate(-24 90 70)"/><circle class="solid" cx="142" cy="38" r="7"/></svg>',
+      '<svg viewBox="0 0 180 140" aria-hidden="true"><path d="M35 30h110v80H35z"/><path d="M35 47h110M55 30v17M125 30v17M55 110V94M125 110V94"/><circle cx="90" cy="78" r="19"/><path d="M90 67v22m-11-11h22"/></svg>',
+      '<svg viewBox="0 0 180 140" aria-hidden="true"><circle cx="90" cy="49" r="25"/><path d="M43 126c3-31 18-46 47-46s44 15 47 46M62 42c7-21 49-28 59 2M68 58c13 8 31 8 44 0"/></svg>',
+      '<svg viewBox="0 0 180 140" aria-hidden="true"><path d="m90 11 12 45 45 12-45 12-12 45-12-45-45-12 45-12 12-45Z"/><path d="m143 18 5 18 18 5-18 5-5 18-5-18-18-5 18-5 5-18Z"/><circle class="solid" cx="90" cy="68" r="8"/></svg>'
+    ];
 
     function typeOf(model) {
       return model.name.toLocaleLowerCase().endsWith('.ysm') ? 'model' : 'archive';
@@ -532,11 +569,14 @@
 
     function makePreview(model) {
       const preview = document.createElement('div');
-      preview.className = 'preview';
-      const fallback = document.createElement('div');
-      fallback.className = 'preview-fallback';
-      fallback.textContent = model.name.trim().charAt(0).toLocaleUpperCase('en-US') || 'Y';
-      preview.append(fallback);
+      let hash = 0;
+      for (const character of model.name) hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
+      const artIndex = hash % DEFAULT_ART.length;
+      preview.className = 'preview default-' + artIndex;
+      const artwork = document.createElement('div');
+      artwork.className = 'default-art';
+      artwork.innerHTML = DEFAULT_ART[artIndex];
+      preview.append(artwork);
 
       if (model.preview) {
         const image = document.createElement('img');
