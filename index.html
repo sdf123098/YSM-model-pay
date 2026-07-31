@@ -310,6 +310,8 @@
     .default-art::after { width: 150px; height: 150px; transform: translate(124px, 78px); }
     .default-art svg { position: relative; z-index: 1; width: 152px; height: 118px; overflow: visible; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.2; }
     .default-art .solid { fill: currentColor; stroke: none; }
+    .preview.has-image .default-art { display: none; }
+    .preview.has-image::after { display: none; }
     }
 
     .preview::after {
@@ -583,7 +585,11 @@
         image.src = downloadUrl(model.preview);
         image.alt = '';
         image.loading = 'lazy';
-        image.addEventListener('error', () => image.remove());
+        image.addEventListener('load', () => preview.classList.add('has-image'));
+        image.addEventListener('error', () => {
+          image.remove();
+          preview.classList.remove('has-image');
+        });
         preview.append(image);
       }
 
