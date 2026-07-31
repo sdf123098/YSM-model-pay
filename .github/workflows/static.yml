@@ -25,6 +25,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Refresh model index
+        run: node scripts/build-model-data.mjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
