@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YSM 模型精选资源站 | Yes Steve Model Pay Library</title>
+  <meta name="description" content="包含38位优秀创作者、1300+ YSM玩家模型与动作整合包的极速检索与免费下载平台。">
+  <meta property="og:title" content="YSM 模型精选资源站">
+  <meta property="og:description" content="在线检索与下载 1300+ Minecraft YSM (Yes Steve Model) 玩家模型。">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-card: rgba(18, 22, 36, 0.7);
+      --bg-card-hover: rgba(28, 34, 54, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(139, 92, 246, 0.3);
+      --primary: #8b5cf6;
+      --primary-glow: rgba(139, 92, 246, 0.4);
+      --secondary: #06b6d4;
+      --pink-accent: #ec4899;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.08) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    /* Ambient Header Background Grid */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header Nav */
+    header {
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 9, 14, 0.8);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .logo-badge i {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      transition: all 0.25s ease;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+    }
+
+    .nav-btn-primary {
+      background: linear-gradient(135deg, var(--primary), #6d28d9);
+      border: none;
+      color: #fff;
+    }
+
+    .nav-btn-primary:hover {
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #a78bfa;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff 30%, #a78bfa 70%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto 50px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Search & Filter Controls */
+    .controls-section {
+      background: rgba(15, 19, 32, 0.75);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .search-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      font-size: 1.1rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 16px 20px 16px 50px;
+      background: rgba(8, 10, 18, 0.8);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .chip-label {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    .filter-chip {
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .filter-chip:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    .filter-chip.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--primary-glow);
+    }
+
+    /* Authors Grid */
+    .authors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .author-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .author-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #4f46e5, #ec4899);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .author-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .author-badges {
+      display: flex;
+      gap: 8px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .badge-ysm {
+      background: rgba(139, 92, 246, 0.2);
+      color: #c4b5fd;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+    }
+
+    .badge-zip {
+      background: rgba(6, 182, 212, 0.2);
+      color: #67e8f9;
+      border: 1px solid rgba(6, 182, 212, 0.4);
+    }
+
+    .author-preview-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .preview-thumb {
+      aspect-ratio: 1;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .preview-thumb:hover {
+      transform: scale(1.05);
+      border-color: var(--primary);
+    }
+
+    .author-body {
+      padding: 20px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .model-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 220px;
+      overflow-y: auto;
+      padding-right: 4px;
+      margin-bottom: 16px;
+    }
+
+    .model-list::-webkit-scrollbar {
+      width: 4px;
+    }
+    .model-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+
+    .model-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .model-item:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .model-name {
+      color: var(--text-main);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 180px;
+    }
+
+    .model-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .model-size {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+
+    .icon-btn:hover {
+      color: #fff;
+    }
+
+    .download-btn {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(139, 92, 246, 0.15);
+      transition: all 0.2s;
+    }
+
+    .download-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .author-footer {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .view-all-btn {
+      font-size: 0.85rem;
+      color: var(--secondary);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .view-all-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #0f1320;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      max-width: 700px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .modal-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 8px 25px var(--primary-glow);
+      z-index: 2000;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.2rem; }
+      .authors-grid { grid-template-columns: 1fr; }
+      .header-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <a href="#" class="logo">
+        <div class="logo-badge">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+        <span>YSM Model Pay</span>
+      </a>
+      <div class="header-links">
+        <a href="https://github.com/sdf123098/YSM-model-pay" target="_blank" class="nav-btn">
+          <i class="fa-brands fa-github"></i> GitHub 仓库
+        </a>
+        <a href="https://github.com/sdf123098/YSM-model-pay/blob/main/README.md" target="_blank" class="nav-btn nav-btn-primary">
+          <i class="fa-solid fa-book"></i> 安装教程 README
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-tag">
+        <i class="fa-solid fa-sparkles"></i> 官方精选资源共享库
+      </div>
+      <h1 class="hero-title">Minecraft YSM 模型与动作大合集</h1>
+      <p class="hero-desc">
+        收录 38 位著名建模师与原画师的 1,300+ 个 Yes Steve Model 玩家皮肤模型、动作特效包及集成整合包。
+      </p>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num" id="stat-authors">38</div>
+          <div class="stat-label">收录创作者</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="stat-models">1,344+</div>
+          <div class="stat-label">YSM 模型数</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="stat-zips">77</div>
+          <div class="stat-label">整合压缩包</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2.68 GB</div>
+          <div class="stat-label">资源总容量</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls-section">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" class="search-input" placeholder="搜索作者名称、模型名称、角色关键字 (如：碧蓝档案, 流萤, 希尔薇, 涂山红红)...">
+      </div>
+      <div class="filter-chips">
+        <span class="chip-label"><i class="fa-solid fa-filter"></i> 快速筛选:</span>
+        <div class="filter-chip active" data-filter="all">全部作者 (38)</div>
+        <div class="filter-chip" data-filter="top">多模型创作者 (>20)</div>
+        <div class="filter-chip" data-filter="zip">包含整合包包</div>
+      </div>
+    </section>
+
+    <!-- Authors Container -->
+    <main>
+      <div class="authors-grid" id="authors-container">
+        <!-- Rendered via JS -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 YSM Model Pay Resource Hub | Powered by GitHub Pages & Git LFS</p>
+      <p style="margin-top: 8px; font-size: 0.8rem; color: var(--text-dim);">
+        资源收集自网络共享，版权归原创作建模师所有。请勿用于商业贩售。
+      </p>
+    </footer>
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h2 class="modal-title" id="modal-title">作者名称</h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">链接已复制到剪贴板！</div>
+
+  <!-- Load Data -->
+  <script src="models_data.js"></script>
+  <script>
+    const RAW_BASE = 'https://github.com/sdf123098/YSM-model-pay/raw/main/';
+
+    let allAuthors = window.MODELS_DATA || [];
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    const container = document.getElementById('authors-container');
+    const searchInput = document.getElementById('search-input');
+    const chips = document.querySelectorAll('.filter-chip');
+    const toast = document.getElementById('toast');
+
+    function showToast(msg) {
+      toast.innerText = msg;
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2500);
+    }
+
+    function encodePath(p) {
+      return encodeURIComponent(p).replace(/%2F/g, '/');
+    }
+
+    function render() {
+      container.innerHTML = '';
+
+      const filtered = allAuthors.filter(item => {
+        // Search filter
+        const matchSearch = searchQuery === '' || 
+          item.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.ysms.some(m => m.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          item.zips.some(z => z.name.toLowerCase().includes(searchQuery.toLowerCase()));
+
+        // Chip filter
+        let matchChip = true;
+        if (currentFilter === 'top') matchChip = item.ysmCount >= 20;
+        if (currentFilter === 'zip') matchChip = item.zipCount > 0;
+
+        return matchSearch && matchChip;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 60px 0; color: var(--text-muted);">
+            <i class="fa-solid fa-ghost" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;">
+            </i>
+            <p>未找到匹配的模型或创作者，请尝试更换搜索关键字。</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'author-card';
+
+        // Badges
+        const badgesHtml = `
+          <span class="badge badge-ysm">${item.ysmCount} 个模型</span>
+          ${item.zipCount > 0 ? `<span class="badge badge-zip">${item.zipCount} 整合包</span>` : ''}
+        `;
+
+        // Images preview
+        let previewHtml = '';
+        if (item.images && item.images.length > 0) {
+          const sampleImgs = item.images.slice(0, 3);
+          previewHtml = `
+            <div class="author-preview-gallery">
+              ${sampleImgs.map(img => `
+                <img class="preview-thumb" src="${RAW_BASE + encodePath(img)}" alt="预览图" onerror="this.style.display='none'">
+              `).join('')}
+            </div>
+          `;
+        }
+
+        // Models preview list
+        const sampleModels = item.ysms.slice(0, 5);
+        const modelsHtml = sampleModels.map(m => {
+          const rawUrl = RAW_BASE + encodePath(m.path);
+          return `
+            <li class="model-item">
+              <span class="model-name" title="${m.name}"><i class="fa-solid fa-cube" style="color:#a78bfa; margin-right:6px;"></i>${m.name}</span>
+              <div class="model-meta">
+                <span class="model-size">${m.sizeMB} MB</span>
+                <button class="icon-btn" onclick="copyLink('${rawUrl}')" title="复制下载链接">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+                <a class="download-btn" href="${rawUrl}" target="_blank">
+                  <i class="fa-solid fa-download"></i> 下载
+                </a>
+              </div>
+            </li>
+          `;
+        }).join('');
+
+        card.innerHTML = `
+          <div class="author-header">
+            <div class="author-info">
+              <div class="author-avatar">${item.author.charAt(0).toUpperCase()}</div>
+              <div class="author-name">${item.author}</div>
+            </div>
+            <div class="author-badges">
+              ${badgesHtml}
+            </div>
+          </div>
+          ${previewHtml}
+          <div class="author-body">
+            <ul class="model-list">
+              ${modelsHtml}
+            </ul>
+            <div class="author-footer">
+              <span style="font-size:0.8rem; color:var(--text-dim);">共 ${item.ysmCount} 模型 ${item.zipCount > 0 ? `+ ${item.zipCount} 压缩包` : ''}</span>
+              <button class="view-all-btn" onclick="openAuthorModal('${item.author}')">
+                查看全部文件 <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function copyLink(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('下载链接已复制到剪贴板！');
+      });
+    }
+
+    function openAuthorModal(authorName) {
+      const item = allAuthors.find(a => a.author === authorName);
+      if (!item) return;
+
+      document.getElementById('modal-title').innerText = item.author + ' - 全部模型与文件';
+      
+      let html = '';
+
+      if (item.zips.length > 0) {
+        html += `
+          <h3 style="color:var(--secondary); margin-bottom:12px; font-size:1.1rem;">
+            <i class="fa-solid fa-file-zipper"></i> 整合压缩包 (${item.zips.length})
+          </h3>
+          <ul style="list-style:none; margin-bottom:20px; display:flex; flex-direction:column; gap:8px;">
+            ${item.zips.map(z => {
+              const url = RAW_BASE + encodePath(z.path);
+              return `
+                <li class="model-item">
+                  <span class="model-name" title="${z.name}"><i class="fa-solid fa-file-zipper" style="color:#67e8f9; margin-right:6px;"></i>${z.name}</span>
+                  <div class="model-meta">
+                    <span class="model-size">${z.sizeMB} MB</span>
+                    <a class="download-btn" href="${url}" target="_blank"><i class="fa-solid fa-download"></i> 下载压缩包</a>
+                  </div>
+                </li>
+              `;
+            }).join('')}
+          </ul>
+        `;
+      }
+
+      html += `
+        <h3 style="color:var(--primary); margin-bottom:12px; font-size:1.1rem;">
+          <i class="fa-solid fa-cubes"></i> YSM 模型列表 (${item.ysms.length})
+        </h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; max-height:400px; overflow-y:auto; padding-right:6px;">
+          ${item.ysms.map(m => {
+            const url = RAW_BASE + encodePath(m.path);
+            return `
+              <li class="model-item">
+                <span class="model-name" title="${m.name}"><i class="fa-solid fa-cube" style="color:#a78bfa; margin-right:6px;"></i>${m.name}</span>
+                <div class="model-meta">
+                  <span class="model-size">${m.sizeMB} MB</span>
+                  <button class="icon-btn" onclick="copyLink('${url}')"><i class="fa-regular fa-copy"></i></button>
+                  <a class="download-btn" href="${url}" target="_blank"><i class="fa-solid fa-download"></i> 下载</a>
+                </div>
+              </li>
+            `;
+          }).join('')}
+        </ul>
+      `;
+
+      document.getElementById('modal-body').innerHTML = html;
+      document.getElementById('modal-overlay').classList.add('active');
+    }
+
+    // Event listeners
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      render();
+    });
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        currentFilter = chip.getAttribute('data-filter');
+        render();
+      });
+    });
+
+    document.getElementById('modal-close').addEventListener('click', () => {
+      document.getElementById('modal-overlay').classList.remove('active');
+    });
+
+    document.getElementById('modal-overlay').addEventListener('click', (e) => {
+      if (e.target.id === 'modal-overlay') {
+        document.getElementById('modal-overlay').classList.remove('active');
+      }
+    });
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>
