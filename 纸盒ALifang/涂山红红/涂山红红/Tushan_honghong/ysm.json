@@ -1,0 +1,85 @@
+{
+  "spec": 2,
+  "metadata": {
+    "name": "涂山红红",
+    "tips": "涂山之王",
+    "license": {
+      "type": "CC 0"
+    },
+    "authors": [
+      {
+        "name": "Cc纸盒",
+        "role": "模型",
+        "avatar": "avatar/zhe.png",
+        "contact": {
+          "Afdian": "https://space.bilibili.com/1494015242?spm_id_from=333.1007.0.0",
+          "Bilibili": "https://space.bilibili.com/1494015242?spm_id_from=333.1007.0.0"
+        },
+        "comment": "模型作者"
+      }
+    ],
+    "link": {
+      "home": "https://modrinth.com/mod/yes-steve-model",
+      "donate": "https://afdian.net/a/ysmmod"
+    }
+  },
+  "properties": {
+    "height_scale": 0.7,
+    "width_scale": 0.7,
+    "extra_animation": {
+      "extra0": "歪头",
+      "extra1": "",
+      "extra2": "",
+      "extra3": "",
+      "extra4": "",
+      "extra5": "祈祷",
+      "extra6": "红眼",
+      "extra7": "喝茶"
+    },
+    "preview_animation": "gui",
+    "gui_no_lighting": false,
+    "gui_foreground": "textures/gui/foreground.png",
+    "gui_background": "textures/gui/background.png",
+    "default_texture": "default",
+    "free": true
+  },
+  "files": {
+    "player": {
+      "model": {
+        "main": "models/main.json",
+        "arm": "models/arm.json"
+      },
+      "animation": {
+        "main": "animations/main.animation.json",
+        "arm": "animations/arm.animation.json",
+        "extra": "animations/extra.animation.json",
+        "tac": "animations/tac.animation.json",
+        "carryon": "animations/carryon.animation.json",
+        "parcool": "animations/parcool.animation.json",
+        "swem": "animations/swem.animation.json",
+        "slashblade": "animations/slashblade.animation.json"
+      },
+      "texture": [
+        "textures/default.png"
+      ]
+    },
+    "projectiles": {
+      "minecraft:arrow": {
+        "model": "models/arrow.json",
+        "animation": "animations/arrow.animation.json",
+        "texture": "textures/arrow.png"
+      },
+      "minecraft:trident": {
+        "model": "models/trident.json",
+        "texture": "textures/trident.png"
+      }
+    },
+    "vehicles": {
+      "minecraft:horse": {
+        "model": "models/horse.json",
+        "texture": "textures/horse.png",
+        "animation": "animations/horse.animation.json"
+      }
+    }
+  }
+}

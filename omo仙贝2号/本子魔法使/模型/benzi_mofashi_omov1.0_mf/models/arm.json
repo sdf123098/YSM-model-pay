@@ -1,0 +1,147 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 384,
+				"texture_height": 384,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "LeftArm_A",
+					"pivot": [1.7, 26.625, 0]
+				},
+				{
+					"name": "LeftArm",
+					"parent": "LeftArm_A",
+					"pivot": [1.7, 26.625, 0],
+					"cubes": [
+						{"origin": [0.225, 21.525, -1.5], "size": [3, 6, 3], "inflate": -0.4, "uv": [35, 40]},
+						{"origin": [0.225, 26.725, -1.5], "size": [1.525, 1.5, 3], "inflate": -0.4, "uv": [48, 35]},
+						{"origin": [0.95, 26.725, -1.501], "size": [2.425, 1.5, 3], "inflate": -0.4, "pivot": [1.35, 27.825, -1.2], "rotation": [0, 0, 25.25], "uv": [48, 30]}
+					]
+				},
+				{
+					"name": "LeftForeArm",
+					"parent": "LeftArm",
+					"pivot": [1.725, 21.925, 0],
+					"cubes": [
+						{"origin": [0.235, 17.325, -1.5], "size": [3, 5, 3], "inflate": -0.4, "uv": [35, 30]}
+					]
+				},
+				{
+					"name": "LeftHand",
+					"parent": "LeftForeArm",
+					"pivot": [1.725, 17.725, 0]
+				},
+				{
+					"name": "LeftHand_b",
+					"parent": "LeftHand",
+					"pivot": [1.525, 17.825, 0],
+					"cubes": [
+						{"origin": [0.225, 15.125, -1.5], "size": [3, 3, 3], "inflate": -0.4, "uv": [35, 50]}
+					]
+				},
+				{
+					"name": "LeftHandLocator",
+					"parent": "LeftHand",
+					"pivot": [1.725, 16.425, 0]
+				},
+				{
+					"name": "coat_LeftArm_2",
+					"parent": "LeftForeArm",
+					"pivot": [1.725, 21.925, 0],
+					"cubes": [
+						{"origin": [0.135, 16.825, -1.6], "size": [3.2, 5.55, 3.2], "inflate": -0.4, "uv": [105, 130]},
+						{"origin": [0.115, 17.35, -1.6], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [0.515, 21.95, -1.2], "rotation": [-9.25, 0.25, 9.25], "uv": [118, 144]},
+						{"origin": [0.135, 17.275, -1.6], "size": [3.2, 5.075, 1.55], "inflate": -0.4, "pivot": [2.86, 21.95, -1.2], "rotation": [-9.25, 0, 0], "uv": [105, 160]},
+						{"origin": [1.835, 17.35, -1.6], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [2.935, 21.95, -1.2], "rotation": [-9.25, -0.25, -9.25], "uv": [118, 130]},
+						{"origin": [1.835, 17.35, 0.1], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [2.935, 21.95, 1.2], "rotation": [9.25, 0.25, -9.25], "uv": [118, 130]},
+						{"origin": [0.135, 17.275, 0.05], "size": [3.2, 5.075, 1.55], "inflate": -0.4, "pivot": [2.86, 21.95, 1.2], "rotation": [9.25, 0, 0], "uv": [114, 160]},
+						{"origin": [0.115, 17.35, 0.1], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [0.515, 21.95, 1.2], "rotation": [9.25, -0.25, 9.25], "uv": [118, 137]},
+						{"origin": [1.835, 17.275, -1.6], "size": [1.5, 5.075, 3.2], "inflate": -0.4, "pivot": [2.935, 21.95, -1.125], "rotation": [0, 0, -9.25], "uv": [114, 151]},
+						{"origin": [0.115, 17.275, -1.6], "size": [1.5, 5.075, 3.2], "inflate": -0.4, "pivot": [0.515, 21.95, -1.125], "rotation": [0, 0, 9.25], "uv": [105, 151]}
+					]
+				},
+				{
+					"name": "coat_LeftArm_1",
+					"parent": "LeftArm",
+					"pivot": [1.7, 26.625, 0],
+					"cubes": [
+						{"origin": [0.125, 21.475, -1.6], "size": [3.2, 3.05, 3.2], "inflate": -0.4, "uv": [105, 139]},
+						{"origin": [-0.075, 23.2, -1.6], "size": [3.9, 1.725, 3.2], "inflate": -0.3, "pivot": [1.625, 23.825, 0], "rotation": [0, 0, -27.5], "uv": [105, 146]}
+					]
+				},
+				{
+					"name": "RightArm_A",
+					"pivot": [-1.6, 26.625, 0]
+				},
+				{
+					"name": "RightArm",
+					"parent": "RightArm_A",
+					"pivot": [-1.6, 26.625, 0],
+					"cubes": [
+						{"origin": [-3.125, 21.525, -1.5], "size": [3, 6, 3], "inflate": -0.4, "uv": [59, 40]},
+						{"origin": [-1.65, 26.725, -1.5], "size": [1.525, 1.5, 3], "inflate": -0.4, "uv": [48, 45]},
+						{"origin": [-3.275, 26.725, -1.501], "size": [2.425, 1.5, 3], "inflate": -0.4, "pivot": [-1.25, 27.825, -1.2], "rotation": [0, 0, -25.25], "uv": [48, 40]}
+					]
+				},
+				{
+					"name": "RightForeArm",
+					"parent": "RightArm",
+					"pivot": [-1.625, 21.925, 0],
+					"cubes": [
+						{"origin": [-3.135, 17.325, -1.5], "size": [3, 5, 3], "inflate": -0.4, "uv": [59, 30]}
+					]
+				},
+				{
+					"name": "RightHand",
+					"parent": "RightForeArm",
+					"pivot": [-1.625, 17.725, 0]
+				},
+				{
+					"name": "RightHand_b",
+					"parent": "RightHand",
+					"pivot": [-1.425, 17.825, 0],
+					"cubes": [
+						{"origin": [-3.125, 15.125, -1.5], "size": [3, 3, 3], "inflate": -0.4, "uv": [59, 50]}
+					]
+				},
+				{
+					"name": "RightHandLocator",
+					"parent": "RightHand",
+					"pivot": [-1.625, 16.425, 0]
+				},
+				{
+					"name": "coat_RightArm_2",
+					"parent": "RightForeArm",
+					"pivot": [-1.625, 21.925, 0],
+					"cubes": [
+						{"origin": [-3.235, 16.825, -1.6], "size": [3.2, 5.55, 3.2], "inflate": -0.4, "uv": [87, 130]},
+						{"origin": [-1.515, 17.35, -1.6], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [-0.415, 21.95, -1.2], "rotation": [-9.25, -0.25, -9.25], "uv": [100, 144]},
+						{"origin": [-3.235, 17.275, -1.6], "size": [3.2, 5.075, 1.55], "inflate": -0.4, "pivot": [-2.76, 21.95, -1.2], "rotation": [-9.25, 0, 0], "uv": [87, 160]},
+						{"origin": [-3.235, 17.35, -1.6], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [-2.835, 21.95, -1.2], "rotation": [-9.25, 0.25, 9.25], "uv": [100, 130]},
+						{"origin": [-3.235, 17.35, 0.1], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [-2.835, 21.95, 1.2], "rotation": [9.25, -0.25, 9.25], "uv": [100, 130]},
+						{"origin": [-3.235, 17.275, 0.05], "size": [3.2, 5.075, 1.55], "inflate": -0.4, "pivot": [-2.76, 21.95, 1.2], "rotation": [9.25, 0, 0], "uv": [96, 160]},
+						{"origin": [-1.515, 17.35, 0.1], "size": [1.5, 5, 1.5], "inflate": -0.4, "pivot": [-0.415, 21.95, 1.2], "rotation": [9.25, 0.25, -9.25], "uv": [100, 137]},
+						{"origin": [-3.235, 17.275, -1.6], "size": [1.5, 5.075, 3.2], "inflate": -0.4, "pivot": [-2.835, 21.95, -1.125], "rotation": [0, 0, 9.25], "uv": [96, 151]},
+						{"origin": [-1.515, 17.275, -1.6], "size": [1.5, 5.075, 3.2], "inflate": -0.4, "pivot": [-0.415, 21.95, -1.125], "rotation": [0, 0, -9.25], "uv": [87, 151]}
+					]
+				},
+				{
+					"name": "coat_RightArm_1",
+					"parent": "RightArm",
+					"pivot": [-1.6, 26.625, 0],
+					"cubes": [
+						{"origin": [-3.225, 21.475, -1.6], "size": [3.2, 3.05, 3.2], "inflate": -0.4, "uv": [87, 139]},
+						{"origin": [-3.725, 23.2, -1.6], "size": [3.9, 1.725, 3.2], "inflate": -0.3, "pivot": [-1.525, 23.825, 0], "rotation": [0, 0, 27.5], "uv": [87, 146]}
+					]
+				}
+			]
+		}
+	]
+}

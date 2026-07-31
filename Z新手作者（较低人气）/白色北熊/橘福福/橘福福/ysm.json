@@ -1,0 +1,105 @@
+{
+	"spec": 2,
+	"metadata": {
+		"name": "橘福福",
+		"tips": "别让福福师姐演这个",
+		"license": {
+			"type": "All Rights Reserved",
+			"desc:": ""
+		},
+		"authors": [
+			{
+				"name": "北熊",
+				"avatar": "avatar/x.jpg",
+				"role": "模型",
+				"comment": "想要成为模型高手"
+			},
+			{
+				"name": "什么鸭",
+				"avatar": "avatar/y.jpg",
+				"role": "动画",
+				"comment": "想要成为动画高手"
+			}
+		],
+		"link": {
+			"home": "https://b23.tv/5QTEZxW",
+			"donate": "https://afdian.com/a/bx233"
+		}
+	},
+	"files": {
+		"player": {
+			"model": {
+				"main": "models/main.json",
+				"arm": "models/arm.json"
+			},
+			"animation": {
+				"main": "animations/main.animation.json",
+				"arm": "animations/arm.animation.json",
+				"extra": "animations/extra.animation.json"
+			},
+			"texture": [
+				{
+					"uv": "textures/texture.png"
+				}
+			]
+		},
+		"projectiles": {
+			"minecraft:arrow": {
+				"model": "models/arrow.json",
+				"texture": {
+					"uv": "textures/arrow.png"
+				}
+			}
+		}
+	},
+	"properties": {
+		"height_scale": 0.7,
+		"width_scale": 0.7,
+		"extra_animation": {
+			"extra0": "#表情1",
+			"extra1": "",
+			"extra2": "",
+			"extra3": "",
+			"extra4": "",
+			"extra5": "511",
+			"extra6": "",
+			"extra7": "猫猫舞"
+		},
+		"preview_animation": "idle",
+		"free": false,
+		"render_layers_first": false,
+		"disable_preview_rotation": false,
+		"all_cutout": false,
+		"gui_no_lighting": false,
+		"extra_animation_buttons": [
+			{
+				"id": "表情1",
+				"name": "表情",
+				"config_forms": [
+					{
+						"type": "radio",
+						"title": "眼睛",
+						"description": "表情",
+						"value": "v.hhh",
+						"labels": {
+							"默认": "v.hhh=0",
+							"闭眼": "v.hhh=1",
+							"不屑": "v.hhh=2"
+						}
+					},
+					{
+						"type": "radio",
+						"title": "嘴巴",
+						"description": "表情",
+						"value": "v.hh",
+						"labels": {
+							"w": "v.hh=0",
+							"ww": "v.hh=1",
+							"v": "v.hh=2"
+						}
+					}
+				]
+			}
+		]
+	}
+}

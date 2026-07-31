@@ -1,0 +1,15 @@
+{
+  "slot": "kokona:attachment/slot/heart_of_sky_scope",
+  "model": "kokona:attachment/heart_of_sky_scope_geo",
+  "texture": "kokona:attachment/uv/heart_of_sky_scope",
+  "zoom": [
+    5.0,
+    10.0
+  ],
+  "scope": true,
+  "fov": 20.0,
+  "sounds": {
+    "install": "tacz:attachments/scope_general_a",
+    "uninstall": "tacz:attachments/scope_general_a"
+  }
+}

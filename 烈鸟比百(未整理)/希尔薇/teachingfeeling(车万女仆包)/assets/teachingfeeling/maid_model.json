@@ -1,0 +1,20 @@
+{
+	"pack_name": "{maid_pack.xierww.name}",
+	"model_list": [
+		{
+			"model_id": "teachingfeeling:x",
+			"is_gecko": true,
+			"animation": [
+				"teachingfeeling:animation/teachingfeeling.x.xierww.silvie.arm.animation.json",
+				"teachingfeeling:animation/teachingfeeling.x.xierww.silvie.extra.animation.json",
+				"teachingfeeling:animation/teachingfeeling.x.xierww.silvie.main.animation.json",
+				"teachingfeeling:animation/teachingfeeling.x.xierww.xierww.main.animation.json"
+			],
+			"render_entity_scale": 0.7
+		}
+	],
+	"version": "1.0.0",
+	"author": ["烈鸟比百"],
+	"description": ["{maid_pack.teachingfeeling.desc}"],
+	"icon": "teachingfeeling:textures/maid_icon.png"
+}

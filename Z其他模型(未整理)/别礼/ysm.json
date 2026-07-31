@@ -1,0 +1,143 @@
+{
+	"spec": 2,
+	"metadata": {
+		"name": "§b别礼",
+		"tips": "§b别礼§7曾是被卡普里尼守墓人夫妇收养的善良女孩
+因抑制食腐者本能对§6进食§7的呼唤而长期饥饿自卑
+塞什卡通过§b超划算零工§7和§e抑制本能的特训
+§7将其培养为身着§d巫术§b时刻§f测试款作战服§7的§4战争王庭公主
+§7她以§b霜雪§7和§5兵刃§7履行合同，同时为实现终末地展示的和平明天而战
+§f阴阳兔工坊出品，有意向定制模型请去闲鱼搜索阴阳兔兔猫",
+		"license": {
+			"type": "CC BY-NC-SA 4.0"
+		},
+		"authors": [
+			{
+				"name": "阴阳兔兔猫",
+				"role": "制作",
+				"avatar": "avatar/阴阳兔工坊.png",
+				"comment": "关注兔兔猫喵",
+				"contact": {
+					"Bilibili": "https://space.bilibili.com/3546785165347464",
+					"爱发电": "https://ifdian.net/a/RABET",
+					"闲鱼": "https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.2.1ab83da6pV7AJ1&userId=3704575491"
+				}
+			}
+		],
+		"link": {
+			"home": "https://space.bilibili.com/3546785165347464",
+			"donate": "https://ifdian.net/a/RABET"
+		}
+	},
+	"properties": {
+		"height_scale": 0.8,
+		"width_scale": 0.8,
+		"extra_animation": {
+			"extra0": "#extra_config",
+			"extra1": "",
+			"extra2": "",
+			"extra3": "定制表情：> _ <",
+			"extra4": "",
+			"extra5": "",
+			"extra6": "",
+			"new": "定制舞蹈",
+			"extra7": ""
+		},
+		"extra_animation_buttons": [
+			{
+				"id": "extra_config",
+				"name": "0",
+				"config_forms": [
+					{
+						"type": "range",
+						"title": "体型: ",
+						"description": "大小",
+						"value": "v.player_size",
+						"step": 0.2,
+						"min": 0.2,
+						"max": 2
+					},
+			{
+						"type": "range",
+						"title": "头部大小切换: ",
+						"description": "大小",
+						"value": "v.player_hand",
+						"step": 0.2,
+						"min": 0.2,
+						"max": 2
+					},
+			{
+						"type": "range",
+						"title": "胸部大小切换: ",
+						"description": "大小",
+						"value": "v.player_pad",
+						"step": 0.2,
+						"min": 0.2,
+						"max": 2
+					},
+						{
+						"type": "a",
+						"title": "显示帽子",
+						"description": "颜色切换（未实装功能，仅作为占位符）",
+						"value": "v.hat"
+					},
+						{
+						"type": "checkbox",
+						"title": "上衣（未实装功能，仅作为占位符）",
+						"description": "颜色切换（未实装功能，仅作为占位符）",
+						"value": "v.sy"
+					},
+						{
+						"type": "checkbox",
+						"title": "鞋子隐藏（未实装功能，仅作为占位符）",
+						"description": "颜色切换（未实装功能，仅作为占位符）",
+						"value": "v.xz"
+					},
+					{
+						"type": "range",
+						"title": "颜色切换（未实装功能，仅作为占位符）: ",
+						"description": "1/2",
+						"value": "v.t",
+						"step": 1,
+						"min": 0,
+						"max": 2
+					}
+				]
+			}
+		],
+		"extra_animation_classify": [],
+		"preview_animation": "gui",
+		"disable_preview_rotation": false,
+		"default_texture": "texture",
+		"render_layers_first": false,
+		"free": false
+	},
+	"files": {
+		"player": {
+			"model": {
+				"main": "models/main.json",
+				"arm": "models/arm.json"
+			},
+			"animation": {
+				"main": "animations/main.animation.json",
+				"arm": "animations/arm.animation.json",
+				"extra": "animations/extra.animation.json",
+				"tac": "animations/tac.animation.json",
+				"carryon": "animations/carryon.animation.json",
+				"parcool": "animations/parcool.animation.json",
+				"swem": "animations/swem.animation.json"
+			},
+			"animation_controllers": ["controller/parallel_controllers.json"],
+			"texture": [
+				{
+					"uv": "textures/texture.png"
+				}
+			]
+		},
+		"arrow": {
+			"model": "models/arrow.json",
+			"texture": "textures/arrow.png",
+			"animation": "animations/arrow.animation.json"
+		}
+	}
+}

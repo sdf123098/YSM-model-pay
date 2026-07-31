@@ -1,0 +1,88 @@
+{
+  "model": "kokona:gun/heart_of_sky_geo",
+  "texture": "kokona:gun/uv/heart_of_sky",
+  "lod": {
+    "model": "kokona:gun/lod/heart_of_sky_geo",
+    "texture": "kokona:gun/lod/heart_of_sky"
+  },
+  "slot": "kokona:gun/slot/heart_of_sky",
+  "hud": "kokona:gun/hud/heart_of_sky",
+  "use_default_animation": "rifle",
+  "third_person_animation": "default",
+  "transform": {
+    "scale": {
+      "thirdperson": [0.6, 0.6, 0.6],
+      "ground": [0.6, 0.6, 0.6],
+      "fixed": [1.2, 1.2, 1.2]
+    }
+  },
+  "iron_zoom": 1.2,
+  "shell": {
+    "initial_velocity": [5, 2, 1],
+    "random_velocity": [1, 1, 0.25],
+    "acceleration": [0.0, -10, 0.0],
+    "angular_velocity": [360, -1200, 90],
+    "living_time": 1.0
+  },
+  // 调用的动画名，会在包目录下的 animations 文件夹中寻找，不建议为空
+  "animation": "kokona:heart_of_sky",
+  // 指定使用缺省动画，可为空。如果上文指定的动画文件里缺少某个动画，如 draw 动画，则会从缺省动画拷贝。
+  // 值可为 rifle、pistol
+  "use_default_animation": "rifle",
+  "sounds": {
+    "inspect": "kokona:heart_of_sky/heart_of_sky_inspect",
+	"inspect_empty": "kokona:heart_of_sky/heart_of_sky_inspect",
+	"draw": "kokona:heart_of_sky/heart_of_sky_draw",
+	"shoot": "kokona:heart_of_sky/heart_of_sky_shoot",
+	"shoot_3p": "kokona:heart_of_sky/heart_of_sky_shoot",
+	"reload_tactical": "kokona:heart_of_sky/heart_of_sky_reload",
+	"reload_empty": "kokona:heart_of_sky/heart_of_sky_reload"
+  },
+  // 枪械模型上的文本显示
+  "text_show": {
+    // 作用的组名，该组的旋转点决定文本的位置和朝向
+    "ammo_count_text_show_pos": {
+      // 文本缩放，默认大小对于 BlockBench 里的 1
+      "scale": 0.5,
+      // 对齐方式：right，center，left
+      "align": "center",
+      // 阴影
+      "shadow": false,
+      // 文本颜色
+      "color": "#ededc5",
+      // 亮度：1-15
+      "light": 15,
+      // 本地化，且支持PlaceholderAPI 风格的占位符
+      // 目前仅支持两个：%player_name% %ammo_count%
+      "text": "%ammo_count%"
+    },
+    // 作用的组名，该组的旋转点决定文本的位置和朝向
+    "ammo_count_text_show_pos2": {
+      // 文本缩放，默认大小对于 BlockBench 里的 1
+      "scale": 0.2,
+      // 对齐方式：right，center，left
+      "align": "center",
+      // 阴影
+      "shadow": false,
+      // 文本颜色
+      "color": "#ededc5",
+      // 亮度：1-15
+      "light": 15,
+      // 本地化，且支持PlaceholderAPI 风格的占位符
+      // 目前仅支持两个：%player_name% %ammo_count%
+      "text": "--AMMO--"
+    }
+  },
+  "offhand_show": {
+    "pos": [1, 19, 4],
+    "rotate": [0, 0, 50],
+    "scale": [0.5, 0.5, 0.5]
+  },
+  "hotbar_show": {
+    "0": {
+      "pos": [-4, 24, 3],
+      "rotate": [-90, -5, -90],
+      "scale": [0.5, 0.5, 0.5]
+    }
+  }
+}

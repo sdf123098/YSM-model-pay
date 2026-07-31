@@ -1,0 +1,109 @@
+{
+  "ammo": "kokona:408e",
+  "ammo_amount": 5,
+  "extended_mag_ammo_amount": [
+    6,
+    7,
+    8
+  ],
+  "bolt": "manual_action",
+  "rpm": 151,
+  "bullet": {
+    "life": 0.8,
+    "bullet_amount": 1,
+    "damage": 85,
+    "tracer_count_interval": 0,
+    "extra_damage": {
+      "armor_ignore": 1.0,
+      "head_shot_multiplier": 2.0,
+      "damage_adjust": [
+        {"distance": 3, "damage": 157},
+        {"distance": 39, "damage": 85},
+        {"distance": 74, "damage": 52},
+        {"distance": "infinite", "damage": 47}
+      ]
+    },
+    "speed": 400,
+    "gravity": 0,
+    "knockback": 0,
+    "friction": 0.01,
+    "ignite": false,
+    "pierce": 4
+  },
+  "reload": {
+    "type": "magazine",
+    "feed": {
+      "empty": 2.05,
+      "tactical": 1.2
+    },
+    "cooldown": {
+      "empty": 2.53,
+      "tactical": 2.03
+    }
+  },
+  "draw_time": 0.43,
+  "put_away_time": 0.87,
+  "aim_time": 0.21,
+  "sprint_time": 0.2,
+  "bolt_action_time": 1.43,
+  "fire_mode": [
+    "semi"
+  ],
+  "recoil": {
+    "pitch": [
+      {"time": 0, "value": [4.5, 4.5]},
+      {"time": 0.32, "value": [4.5, 4.5]},
+      {"time": 0.57, "value": [-0.5, -0.5]},
+      {"time": 0.82, "value": [0.25, 0.25]},
+      {"time": 1.17, "value": [0, 0]},
+      {"time": 1.47, "value": [0, 0]}
+    ],
+    "yaw": [
+      {"time": 0, "value": [-0.7, 0.75]},
+      {"time": 0.32, "value": [-0.7, 0.75]},
+      {"time": 0.57, "value": [0, 0]}
+    ]
+  },
+  "inaccuracy": {
+    "stand": 5.5,
+    "move": 6,
+    "sneak": 5.25,
+    "lie": 4,
+    "aim": 0.075
+  },
+  "melee": {
+    // 枪械距离参数，用来延升近战攻击范围
+    // 会与刺刀等配件的距离做加和
+    "distance": 1,
+    // 使用时的冷却时间
+    "cooldown": 0.6,
+    // 默认近战数据，会被配件的数据替换掉
+    "default": {
+      // 动画类型：没有枪托的为 melee_push，有枪托的为 melee_stock
+      "animation_type": "melee_push",
+      // 刺刀距离参数，枪械里还有个刺刀攻击距离参数，两者做加和
+      "distance": 2,
+      // 刺刀范围角度
+      "range_angle": 30,
+      // 伤害值
+      "damage": 2.0,
+      // 击退效果
+      "knockback": 0.5,
+      // 前摇时长，单位：秒
+      "prep": 0.1
+    }
+  },
+  "allow_attachment_types": [
+    "scope",
+    "extended_mag"
+  ],
+  "exclusive_attachments": {
+    "tacz:scope_standard_8x": {
+      "weight": 2.0,
+      "ads_addend": 0.04,
+      "recoil_modifier": {
+        "yaw": -0.2
+      }
+    }
+  }
+}

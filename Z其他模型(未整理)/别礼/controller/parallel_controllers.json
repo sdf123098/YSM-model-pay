@@ -1,0 +1,59 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"player.parallel_1": {
+			"states": {
+				"default": {
+					"animations": [
+						{"attack_emp": "hold_mainhand:sword"}
+					],
+					"on_exit": ["v.swing_sword=0;v.attack=math.mod(v.attack+1,4);"],
+					"transitions": [
+						{"sword_attack_01": "v.swing_sword&&v.attack==0"},
+						{"sword_attack_02": "v.swing_sword&&v.attack==1"},
+						{"sword_attack_03": "v.swing_sword&&v.attack==2"},
+						{"sword_attack_04": "v.swing_sword&&v.attack==3"}
+					],
+					"blend_transition": 0.15,
+					"blend_via_shortest_path": true
+				},
+				"sword_attack_01": {
+					"animations": ["sword_attack_01"],
+					"on_exit": ["v.swing_sword=0;v.attack=math.mod(v.attack+1,4);"],
+					"transitions": [
+						{"default": "q.all_animations_finished"},
+						{"sword_attack_02": "v.swing_sword&&v.attack==1"}
+					],
+					"blend_transition": 0.15
+				},
+				"sword_attack_02": {
+					"animations": ["sword_attack_02"],
+					"on_exit": ["v.swing_sword=0;v.attack=math.mod(v.attack+1,4);"],
+					"transitions": [
+						{"default": "q.all_animations_finished"},
+						{"sword_attack_03": "v.swing_sword&&v.attack==2"}
+					],
+					"blend_transition": 0.15
+				},
+				"sword_attack_03": {
+					"animations": ["sword_attack_03"],
+					"on_exit": ["v.swing_sword=0;v.attack=math.mod(v.attack+1,4);"],
+					"transitions": [
+						{"default": "q.all_animations_finished"},
+						{"sword_attack_04": "v.swing_sword&&v.attack==3"}
+					],
+					"blend_transition": 0.15
+				},
+				"sword_attack_04": {
+					"animations": ["sword_attack_04"],
+					"on_exit": ["v.swing_sword=0;v.attack=math.mod(v.attack+1,4);"],
+					"transitions": [
+						{"default": "q.all_animations_finished"},
+						{"sword_attack_01": "v.swing_sword&&v.attack==0"}
+					],
+					"blend_transition": 0.15
+				}
+			}
+		}
+	}
+}

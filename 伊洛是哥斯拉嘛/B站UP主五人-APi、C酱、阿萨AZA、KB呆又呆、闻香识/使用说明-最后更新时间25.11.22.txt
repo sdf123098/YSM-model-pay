@@ -1,0 +1,19 @@
+# BilibiliUP主-Api、C酱、AZA、KBDYD、闻香识 YSM模型
+   *使用软件*：Blockbench
+   *模型作者*：完全冻结ALL
+
+
+ 使用须知：
+请确保你正确安装Yes Steve Model模组后，将模型文件放入你的minecraft目录下/.minecraft/config/yse_steve_model/custom或者auth文件夹中
+
+二次传播本模型时还请一并附带本readme文件。
+如发现倒卖者或模型bug可联系作者qq：1181899594
+
+模型注释：
+25.11.22-适配版本为YSM2.5.1
+
+后续更新链接
+ https://pan.baidu.com/s/1anExzizhu8rPcWBP08qdXQ?pwd=k69b 提取码: k69b
+
+
+                                                                                                                                                                         -2025.11.22-

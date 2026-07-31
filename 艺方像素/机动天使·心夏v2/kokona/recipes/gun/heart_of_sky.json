@@ -1,0 +1,32 @@
+{
+  "materials": [
+    {
+      "item": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 10
+    },
+    {
+      "item": {
+        "tag": "forge:ingots/gold"
+      },
+      "count": 32
+    },
+    {
+      "item": {
+        "tag": "forge:ingots/iron"
+      },
+      "count": 150
+    },
+    {
+      "item": {
+        "tag": "forge:dusts/redstone"
+      },
+      "count": 64
+    }
+  ],
+  "result": {
+    "type": "gun",
+    "id": "kokona:heart_of_sky"
+  }
+}
